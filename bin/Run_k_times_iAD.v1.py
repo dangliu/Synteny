@@ -64,6 +64,7 @@ for i in range(int(k)):
 	subprocess.call('cp -s ' + dir_path + '/data_source/gffs/' + ref + '.coding_gene.gff ./', shell=True)
 	subprocess.call('cp -s ' + dir_path + '/frag_assemblies/' + ref + 'vs' + qry + '/For_iAD/' + qry + '.' + str(n) + 'kb.coding_gene.gff ./', shell=True)
 	# to sub directory for gff parsing
+	subprocess.call('cp -s ' + dir_path + '/bin/gffs/gff_parse_foriAD.py ./', shell=True)
 	subprocess.call('mkdir ' + qry + '_A_' + str(n) + 'kb', shell=True)
 	subprocess.call('mkdir ' + ref + '_B', shell=True)
 	os.chdir(dir_path + '/raw_process/iAD/' + ref + 'vs' + qry + '/' + ref + '_B')
