@@ -68,11 +68,11 @@ for i in range(int(k)):
 	subprocess.call(dir_path + '/bin/DAGCHAINER/run_DAG_chainer.pl -i  ' + str(n) + 'kb.blast.txt.match_file.filtered -Z 12 -D 10 -g 1 -A 5 > DAG.log', shell=True)
 	subprocess.call('python ' + dir_path + '/bin/DAG_out_transform.py ' + dir_path + '/frag_assemblies/' + ref + 'vs' + qry + '/fixed/' + qry + '.' + str(n) + 'kb.coding_gene.gff ' + dir_path + '/data_source/gffs/' + ref + '.coding_gene.gff ' + str(n) + 'kb.blast.txt.match_file.filtered.aligncoords', shell=True)
 	
-	subprocess.call('python ' + dir_path + '/synteny_gff.py transformed.' + str(n) + 'kb.blast.txt.match_file.filtered.aligncoords A', shell=True)
+	subprocess.call('python ' + dir_path + '/bin/synteny_gff.py transformed.' + str(n) + 'kb.blast.txt.match_file.filtered.aligncoords A', shell=True)
 	subprocess.call('cat A.transformed.' + str(n) + 'kb.blast.txt.match_file.filtered.aligncoords.int* > pre.' + str(n) + 'kb.synteny.gff', shell=True)
-	subprocess.call('python ' + dir_path + '/gff_sorting.py pre.' + str(n) + 'kb.synteny.gff > qry.' + str(n) + 'kb.synteny.gff', shell=True)
+	subprocess.call('python ' + dir_path + '/bin/gff_sorting.py pre.' + str(n) + 'kb.synteny.gff > qry.' + str(n) + 'kb.synteny.gff', shell=True)
 	subprocess.call(dir_path + '/bin/bedtools2/bin/bedtools merge -i qry.' + str(n) + 'kb.synteny.gff -c 4 -o count > qry.' + str(n) + 'kb.merge.bed', shell=True)
-	subprocess.call('python ' + dir_path + '/bed2gff.py qry.' + str(n) + 'kb.merge.bed', shell=True)
+	subprocess.call('python ' + dir_path + '/bin/bed2gff.py qry.' + str(n) + 'kb.merge.bed', shell=True)
 
 	subprocess.call('python ' + dir_path + '/bin/synteny_gff.py transformed.' + str(n) + 'kb.blast.txt.match_file.filtered.aligncoords B', shell=True)
 	subprocess.call('cat B.transformed.' + str(n) + 'kb.blast.txt.match_file.filtered.aligncoords.int* > pre.' + str(n) + 'kb.synteny.gff', shell=True)
