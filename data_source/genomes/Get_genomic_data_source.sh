@@ -11,3 +11,8 @@ python ../../bin/fasta_length.py c_elegans.PRJNA13758.WS255.genomic.fa > CE.ref.
 python ../../bin/fasta_length.py c_briggsae.PRJNA10731.WS255.genomic.fa > CBG.ref.fa.len.txt
 python ../../bin/fasta_length.py strongyloides_ratti.PRJEB125.WBPS8.genomic.fa > SR.ref.fa.len.txt
 python ../../bin/fasta_length.py strongyloides_stercoralis.PRJEB528.WBPS8.genomic.fa > SS.ref.fa.len.txt
+## Set symbolic links
+ln -s c_elegans.PRJNA13758.WS255.genomic.fa ./CE.genome.fa
+ln -s c_briggsae.PRJNA10731.WS255.genomic.fa ./CBG.genome.fa
+ln -s strongyloides_ratti.PRJEB125.WBPS8.genomic.fa ./SR.genome.fa
+ln -s strongyloides_stercoralis.PRJEB528.WBPS8.genomic.fa ./SS.genome.fa
