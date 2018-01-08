@@ -1,6 +1,6 @@
 # Synteny
 
-# Still under testing
+### Still under testing
 
 ## prerequisite:
 ## Species data source
