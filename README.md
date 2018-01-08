@@ -1,5 +1,7 @@
 # Synteny
 
+# Still under testing
+
 ## prerequisite:
 ## Species data source
 - species data source can be downloaded from WormBase ftp://ftp.wormbase.org/pub/wormbase/
