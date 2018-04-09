@@ -4,7 +4,7 @@ Still *under testing*
 ---
 ## prerequisite:
 ### Species data source
-- species data source can be downloaded from [WormBase](ftp://ftp.wormbase.org/pub/wormbase/).
+- species data source can be downloaded from WormBase ftp://ftp.wormbase.org/pub/wormbase/.
 - WS255 for *C. elegans* and *C. briggsae*
 - WBPS8 for *S. ratti* and *S. stercoralis*
 ### Programs to be downloaded and inatalled in /bin 
